@@ -49,16 +49,7 @@ docker-compose down
 DB_PATH=./todos.db
 SERVER_PORT=8080
 ENVIRONMENT=development
-
-# Porta de acesso das requisições do swagger (apenas em desenvolvimento) e não deve ser alterada
-SWAGGER_PORT=8080
 ```
-
-### Serviços Docker
-- **API**: Serviço principal da aplicação
-- **Swagger UI**: Interface para documentação (disponível apenas em desenvolvimento)
-
-Esta seção fornece todas as informações necessárias para executar o projeto usando Docker, mantendo a documentação clara e objetiva.
 
 ## 🔧 Instalação Local
 
@@ -122,8 +113,9 @@ GET /api/todos
 ```http
 PATCH /api/todos/{id}/status
 
+0: PENDING, 1: IN_PROGRESS, 2: PAUSED, 3: COMPLETED, 4: CANCELED
 {
-    "status": 1  // 0: PENDING, 1: IN_PROGRESS, 2: PAUSED, 3: COMPLETED, 4: CANCELED
+    "status": 1  
 }
 ```
 
